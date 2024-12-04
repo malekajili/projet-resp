@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Event MNA</title>
+</head>
+
+<body>
+    <header>
+        <img src="image/logo-removebg-preview.png" alt="Logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="service.html">Services</a></li>
+                <li><a href="Gallerie.html">Galerie</a></li>
+                <li><a href="contact.html">Réservation</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="cont">
+        <h2>Réservation</h2>
+    </div>
+
+    <h2 style="color: black; font-size: xx-large; text-align: center; font-variant: inherit; font-style: italic;">Nous couvrons vos émotions à la réalité</h2>
+
+    <div class="card">
+        <div class="form">
+            <h3 style="color: black;">Visitez nous</h3>
+            <!-- Carte remplaçant l'image -->
+            <div id="map"></div>
+        </div>
+
+        <div class="form">
+            <h2 style="color: black;">Réservez vous</h2>
+            <form>
+                <label for="fname">Nom:</label>
+                <input type="text" id="fname" name="fname" required>
+                <label for="lname">Prenom:</label>
+                <input type="text" id="lname" name="lname" required>
+                <label for="phone">Telephone:</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="1234567890" required>
+                <label for="email">Address e-mail:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="Paques">Sélectionnez un paque :</label>
+                <select id="Paques" name="Paque">
+                    <option value="Mariage">Mariage</option>
+                    <option value="Anniversaire">Anniversaire</option>
+                    <option value="Fete">Fete</option>
+                </select>
+                <label for="date">Date d'événement:</label>
+                <input type="date" id="Date" name="Date" required>
+                <textarea name="message" rows="10" cols="30" placeholder="Ecrire un message" required></textarea>
+                <input type="submit" value="Envoyer">
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <ul>
+            <li><a href="#" target="_blank"><img src="image/tik-tok.png" alt="TikTok"></a></li>
+            <li><a href="#" target="_blank"><img src="image/facebook.png" alt="Facebook"></a></li>
+            <li><a href="#" target="_blank"><img src="image/instagram.png" alt="Instagram"></a></li>
+        </ul>
+        <div class="contact-info">
+            <p>Nom: Event MNA</p>
+            <p>Adresse: Tunis</p>
+            <p>E-mail: <a href="mailto:votre@email.com">EventMNA@email.com</a></p>
+        </div>
+        <p>&copy; 2024 Event MNA. All rights reserved.</p>
+    </footer>
+
+    <!-- Script Google Maps -->
+    <script>
+        function initMap() {
+            const location = { lat: 36.8065, lng: 10.1815 }; // Coordonnées pour Tunis
+            const map = new google.maps.Map(document.getElementById("map"), {
+                center: location,
+                zoom: 12,
+            });
+
+            // Marqueur pour la position
+            new google.maps.Marker({
+                position: location,
+                map: map,
+                title: "Tunis",
+            });
+        }
+    </script>
+
+    <!-- Ajout de l'API Google Maps -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+</body>
+
+</html>

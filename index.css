@@ -1,0 +1,609 @@
+/* Définition des styles de base pour le corps du document */
+body {
+    font-family: Arial, sans-serif;
+    margin: 10px;
+   
+}
+
+/* Styles pour l'en-tête du site */
+header {
+    background-color: #fff;
+    color: rgb(34, 32, 32);
+    text-align: left;
+    padding: 1.5rem 5px; /* Ajustement du padding en réduisant l'espace sur les côtés */
+    display: flex;
+    align-items: center;
+}
+
+
+/* Styles pour l'image dans l'en-tête */
+header img {
+    max-width: 100px;
+}
+
+/* Navigation menu styles */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 5px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+/* Navigation links styling */
+nav ul li a {
+    font: bold 14px/1.4 'Open Sans', arial, sans-serif;
+    color: #0f0b0b;
+    text-decoration: none;
+    padding: 10px 26px;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+}
+
+/* Hover effect for navigation links */
+nav ul li a:hover {
+    background-color: #8B4513;
+    color: black;
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+
+/* Styles pour la section principale du contenu */
+.main-content {
+    background-color: #fff;
+    padding: 20px;
+}
+
+/* Styles pour la section de bienvenue */
+.welcome {
+    margin-bottom: 50px; /* Réduit la marge inférieure */
+    padding: 50px; /* Réduit le rembourrage */
+    text-align: center;
+    position: relative;
+    height: 300px;
+}
+
+.welcome::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url('image/aa.jpg') center/cover no-repeat;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.welcome h2 {
+    font-size: 50px; /* Réduit la taille de la police */
+    text-transform: uppercase;
+    font-family: 'Gambetta', serif;
+    letter-spacing: -3px;
+    transition: 700ms ease;
+    font-variation-settings: "wght" 311;
+    margin-bottom: 0.8rem;
+    color: #8B4513;
+    outline: none;
+    text-align: center;
+}
+
+.welcome h2:hover {
+    font-variation-settings: "wght" 582;
+    letter-spacing: 1px;
+}
+
+
+
+/* Styles pour la sous-section de bienvenue */
+.welcome1 {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.container.welcome1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrer les éléments horizontalement */
+}
+
+.container.welcome1 h3 {
+    /* Vos styles pour h3 restent inchangés */
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    text-transform: uppercase;
+    background-image: linear-gradient(
+      -225deg,
+      #231557 0%,
+      #44107a 29%,
+      #ff1361 67%,
+      #fff800 100%
+    );
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+    display: inline-block;
+    font-size: 70px; /* Ajustez la taille de la police au besoin */
+}
+
+@keyframes textclip {
+    to {
+        background-position: 200% center;
+    }
+}
+
+.container.welcome1 p {
+    /* Vos styles pour p restent inchangés */
+    font-family: 'AmstelvarAlpha', sans-serif;
+    color: #777;
+    line-height: 1.6;
+    font-size: 17px;
+    font-style: oblique;
+    font-variant: small-caps;
+    max-width: 600px;
+    margin: 0;
+    border: 1px solid #8B4513;
+    padding: 20px;
+    display: inline-block;
+    margin-top: 10px; /* Ajustez cette valeur pour définir l'espace entre le titre et le paragraphe */
+}
+
+  .container.welcome2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Ajout de cette propriété pour l'alignement vertical */
+}
+
+.container.welcome2 h3 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    text-transform: uppercase;
+    background-image: linear-gradient(
+      -225deg,
+      #231557 0%,
+      #44107a 29%,
+      #ff1361 67%,
+      #fff800 100%
+    );
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+    display: inline-block;
+    font-size: 70px; /* Adjust the font size as needed */
+}
+
+.container.welcome3 p {
+    font-family: 'AmstelvarAlpha', sans-serif;
+    color: #777;
+    line-height: 1.6;
+    font-size: 17px;
+    font-style: oblique;
+    font-variant: small-caps;
+    max-width: 600px;
+    margin: 0;
+    border: 1px solid #8B4513;
+    padding: 20px;
+    display: inline-block;
+    margin-right: 3em; /* Adjust this value to set the space between the paragraph and the video */
+}
+
+.container.welcome3 video {
+    max-width: 100%;
+    margin-top: 0;
+    display: inline-block;
+    vertical-align: top; /* Adjust vertical alignment as needed */
+}
+
+
+
+  
+  
+
+  .welcome1 .button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.welcome1 .btn {
+    text-decoration: none;
+    color: #fff;
+    background-color: #8B4513;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 0 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.welcome1 .btn:hover {
+    background-color: #8B4513;
+    transform: scale(1.1);
+}
+
+.welcome1 .btn:first-child {
+    margin-right: 15px; /* Ajustez la valeur selon l'espace désiré entre les boutons */
+}
+
+.welcome1 .btn:last-child {
+    margin-left: 93px; /* Ajustez la valeur selon l'espace désiré entre les boutons */
+}
+
+
+.welcome1 .img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.welcome1 .img-container img {
+    width: 30%;
+    padding: 15px;
+    box-sizing: border-box;
+    margin: 10px; /* Ajoutez la marge souhaitée entre les images */
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+.welcome1 .img-container img:hover {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+}
+
+
+/* Styles pour la section de navigation */
+.nav {
+    background-color: #f3e6d8;
+    padding: 10px; /* Diminuer le rembourrage */
+}
+
+.nav h3 {
+    text-align: center;
+    font-family: 'Georgia', serif;
+    font-size: 50px;
+    font-weight: bold;
+    color: hsl(0, 0%, 28%);
+    margin-bottom: 15px;
+    letter-spacing: 7px;
+    transition: 0.5s ease-out;
+}
+
+.nav h3:hover :nth-child(1) {
+    margin-right: 5px;
+}
+
+.nav h3:hover :nth-child(1):after {
+    content: "'";
+}
+
+.nav h3:hover :nth-child(2) {
+    margin-left: 30px;
+}
+
+.nav h3:hover {
+    color: #fff;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff;
+}
+
+
+.nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+}
+
+.nav ul li {
+    text-align: center;
+    color: #666;
+}
+
+.nav ul li img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    opacity: 1;
+    transition: opacity .3s ease-in-out;
+}
+
+.nav ul li img:hover {
+    opacity: 0.5;
+}
+
+.nav ul li p {
+    margin-top: 5px;
+    font-size: 14px;
+    font-family: "Lucida Console", monospace;
+    font-weight: bold;
+    color: #8B4513;
+    border: 2px solid #8B4513;
+    padding: 10px;
+    border-radius: 5px;
+    
+}
+
+/* Styles pour la section de l'équipe */
+.team {
+    text-align: center;
+}
+
+.team h3 {
+    color: hsl(0, 0%, 28%);
+    font-size: 50px;
+    font-weight: bold;
+    font-family: monospace;
+    letter-spacing: 7px;
+    cursor: pointer;
+    transition: 0.5s ease-out;
+  }
+  
+  .team h3:hover {
+    color: #8B4513;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff;
+  }
+  
+  
+  h1:hover {
+    color: #fff;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff;
+  }
+  
+  .team h3 {
+    color: #333;
+    /* Add additional styles for .team h3 here if needed */
+  }
+
+.team ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+}
+
+.team ul li {
+    text-align: center;
+    color: #666;
+}
+
+/* Grayscale Effect */
+.team ul li img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+  }
+  
+  .team ul li img:hover {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+  }
+  
+
+.team ul li p {
+    margin-top: 5px;
+    font-size: 14px;
+    font-family: 'Lucida Console', monospace;
+}
+
+/* Styles pour le pied de page */
+footer {
+    background-color: #8B4513;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+footer ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+footer ul li a img {
+    width: 30px;
+    height: 30px;
+}
+
+footer p {
+    font-size: 14px;
+    margin: 0;
+}
+
+.contact-info a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Style général pour les sections de pack */
+.pack-section {
+    width: 300px;
+    height: 520px;
+    background-color: #f0e4d7; /* Couleur nude (vous pouvez ajuster cette valeur) */
+    color: black;
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin: 5rem; /* Marge de 1.5rem (~15px) de chaque côté */
+    display: inline-block;
+    box-sizing: border-box;
+    vertical-align: top;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+  }
+  
+  
+  
+  /* Style pour le titre du pack */
+  .pack-title {
+    color: #333;
+    font-size: 20px;
+    font-variant: small-caps;
+    font-style: italic;
+    text-align: center;
+  }
+  
+  /* Style pour l'image du pack */
+ /* Style pour les images dans les sections pack */
+ .pack-image {
+    width: 5cm; /* Largeur fixe de l'image */
+    height: 5cm; /* Hauteur fixe de l'image */
+    object-fit: cover; /* Permet de conserver le rapport hauteur/largeur tout en remplissant le conteneur */
+    display: block; /* Permet de centrer l'image horizontalement dans son conteneur */
+    margin: 0 auto; /* Centre l'image horizontalement */
+    border-radius: 8px; /* Ajoute des coins arrondis à l'image, ajustez selon vos préférences */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ajoute une ombre légère à l'image */
+  }
+  
+  
+  /* Style pour la liste des éléments du pack */
+  .pack-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  /* Style pour chaque élément de la liste du pack */
+  .pack-item {
+    margin-bottom: 5px;
+  }
+  
+  /* Style pour le prix du pack */
+  .pack-price {
+    font-weight: bold;
+    color: #ff6600; /* Couleur orange, ajustez selon vos préférences */
+  }
+  
+
+/*buttun reservation*/
+.pack-section .button-container {
+    display: flex;
+ margin: 200px;
+    margin-top: 30px;
+}
+
+.pack-section .btn {
+    text-decoration: none;
+    color: #fff;
+    background-color: #8B4513;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 0 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.pack-section .btn:hover {
+    background-color: #8B4513;
+    transform: scale(1.1);
+}
+
+.pack-section .btn:first-child {
+    margin-right: 15px; /* Ajustez la valeur selon l'espace désiré entre les boutons */
+}
+
+.pack-section .btn:last-child {
+    margin-left: 93px; /* Ajustez la valeur selon l'espace désiré entre les boutons */
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+
+    header nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .img-container {
+        flex-direction: column;
+    }
+
+    .nav ul {
+        flex-direction: column;
+    }
+
+    .team ul {
+        flex-direction: column;
+    }
+
+    .team ul li {
+        margin: 20px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    header img {
+        height: 100px;
+    }
+    
+
+
+    .btn {
+        padding: 8px 16px;
+    }
+
+    .img-container img {
+        max-width: 100%;
+    }
+
+    .nav ul li img {
+        width: 150px;
+        height: 150px;
+    }
+
+    footer ul li {
+        margin: 0 5px;
+    }
+}
